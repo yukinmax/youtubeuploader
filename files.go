@@ -80,7 +80,8 @@ func LoadVideoMeta(config Config) (*VideoMeta, *youtube.Video, error) {
 	// Force send some boolean values.
 	// Without this, defaults on the Youtube side are used which can have unexpected results.
 	// See: https://github.com/porjo/youtubeuploader/issues/132
-	video.Status.ForceSendFields = []string{"SelfDeclaredMadeForKids", "ContainsSyntheticMedia"}
+	video.Status.ForceSendFields = []string{"SelfDeclaredMadeForKids", "ContainsSyntheticMedia",
+											"Embeddable", "PublicStatsViewable"}
 
 	// attempt to load from meta JSON, otherwise use values specified from command line flags
 	if config.MetaJSON != "" {
