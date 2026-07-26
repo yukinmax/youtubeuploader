@@ -35,9 +35,9 @@ type VideoMeta struct {
 
 	// status
 	PrivacyStatus          string `json:"privacyStatus,omitempty"`
-	Embeddable             bool   `json:"embeddable,omitempty"`
+	Embeddable            *bool   `json:"embeddable,omitempty"`
 	License                string `json:"license,omitempty"`
-	PublicStatsViewable    bool   `json:"publicStatsViewable,omitempty"`
+	PublicStatsViewable   *bool   `json:"publicStatsViewable,omitempty"`
 	PublishAt              Date   `json:"publishAt,omitempty"`
 	MadeForKids            bool   `json:"madeForKids,omitempty"`
 	ContainsSyntheticMedia bool   `json:"containsSyntheticMedia,omitempty"`
